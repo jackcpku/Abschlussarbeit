@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "intrin.h": "c",
+        "x86intrin.h": "c",
+        "pthread.h": "c",
+        "cstdlib": "c",
+        "signal.h": "c",
+        "paddr.h": "c",
+        "stdlib.h": "c",
+        "mman.h": "c",
+        "functional": "c",
+        "*.tcc": "c",
+        "optional": "c",
+        "system_error": "c",
+        "array": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "istream": "c",
+        "ostream": "c"
+    }
+}
