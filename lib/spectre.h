@@ -7,6 +7,8 @@
 #include <stdbool.h>
 #include <pthread.h>
 
+#include "./speculation_barrier.h"
+
 uint8_t array1[160] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 uint8_t channel[256 * 512];
 pthread_t inc_counter_thread;

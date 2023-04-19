@@ -6,6 +6,8 @@
 #include <sys/mman.h>
 #include <pthread.h>
 
+// #define MITIGATION
+
 #define CACHE_HIT_THRESHOLD 80
 #define PAGE_SIZE 512
 
@@ -109,6 +111,10 @@ void spectre_rsb(size_t malicious_offset)
 {
     j = malicious_offset;
     gadget();
+
+#ifdef MITIGATION
+    asm volatile("DSB SY");
+#endif
 
     // The following code is only speculatively executed.
     // printf("This code should not be executed!\n");

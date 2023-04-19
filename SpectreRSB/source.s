@@ -66,7 +66,7 @@ inc_counter:
 	ldr	x0, [x0, #:got_lo12:counter]
 	str	x1, [x0]
 #APP
-// 25 "source.c" 1
+// 27 "source.c" 1
 	DMB SY
 // 0 "" 2
 #NO_APP
@@ -83,7 +83,7 @@ timed_read:
 	str	x0, [sp, 24]
 	ldr	x0, [sp, 8]
 #APP
-// 37 "source.c" 1
+// 39 "source.c" 1
 	DSB SY
 LDR X5, [x0]
 DSB SY
@@ -105,10 +105,10 @@ flush:
 	str	x0, [sp, 8]
 	ldr	x0, [sp, 8]
 #APP
-// 50 "source.c" 1
+// 52 "source.c" 1
 	DC CIVAC, x0
 // 0 "" 2
-// 53 "source.c" 1
+// 55 "source.c" 1
 	DSB SY
 // 0 "" 2
 #NO_APP
@@ -157,16 +157,16 @@ measure_latency:
 	.type	gadget, %function
 gadget:
 #APP
-// 97 "source.c" 1
+// 99 "source.c" 1
 	mov X2, sp
 // 0 "" 2
-// 98 "source.c" 1
+// 100 "source.c" 1
 	DC CIVAC, X2
 // 0 "" 2
-// 101 "source.c" 1
+// 103 "source.c" 1
 	ldp x29, x30, [sp], 0x20
 // 0 "" 2
-// 104 "source.c" 1
+// 106 "source.c" 1
 	ret
 
 // 0 "" 2
@@ -546,7 +546,7 @@ main:
 	cmp	x1, x0
 	bls	.L39
 #APP
-// 196 "source.c" 1
+// 202 "source.c" 1
 	DSB SY
 // 0 "" 2
 #NO_APP

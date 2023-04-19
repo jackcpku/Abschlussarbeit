@@ -17,6 +17,8 @@
         "type_traits": "c",
         "utility": "c",
         "istream": "c",
-        "ostream": "c"
+        "ostream": "c",
+        "spectre.h": "c",
+        "speculation_barrier.h": "c"
     }
 }
