@@ -604,7 +604,7 @@ main:
 	cmp	w0, 255
 	ble	.L42
 	str	xzr, [x29, 32]
-	mov	w0, 16
+	mov	w0, 40
 	str	w0, [x29, 20]
 	adrp	x0, :got:secret
 	ldr	x0, [x0, #:got_lo12:secret]

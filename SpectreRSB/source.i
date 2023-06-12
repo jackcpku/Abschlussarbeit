@@ -4466,7 +4466,7 @@ int main()
     int score[2];
 
     size_t offset = 0;
-    int len = 16;
+    int len = 40;
 
     printf("Reading %d bytes starting at %p:\n", len, secret);
     while (--len >= 0)
